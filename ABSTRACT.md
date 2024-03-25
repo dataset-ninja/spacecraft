@@ -42,7 +42,7 @@ Once the authors obtained a satisfactory number of masks through the bootstrap c
 
 The final dataset comprises 3117 images, all standardized to a resolution of 1280 × 720. Within these images, there are masks delineating 10350 parts belonging to 3667 *spacecraft*. The *spacecraft* objects vary widely in size, ranging from as small as 100 pixels to nearly occupying the entirety of the images. On average, each *spacecraft* occupies an area of 122318.68 pixels. Furthermore, specific parts such as the *antenna*, *solar panel*, and main *body* occupy areas averaging 22853.64, 75070.76, and 75090.92 pixels, respectively. To facilitate standardized benchmarking of segmentation methods, the authors partitioned the dataset into training and test subsets, comprising 2516 and 600 images, respectively.
 
-<img src="https://github.com/dataset-ninja/spacecraft/assets/120389559/5c05db11-37c4-4d3f-8954-dc4570cd8bb0" alt="image" width="800">
+<img src="https://github.com/dataset-ninja/spacecraft/assets/120389559/5c05db11-37c4-4d3f-8954-dc4570cd8bb0" alt="image" width="600">
 
 <span style="font-size: smaller; font-style: italic;">Histograms of the spacecraft mask areas in the training and test set.</span>
 
