@@ -26,12 +26,11 @@ Utilizing the initial dataset from the previous phase, the authors embarked on e
 
 <img src="https://github.com/dataset-ninja/spacecraft/assets/120389559/5e6b7e2a-c323-4cf9-91f5-956d5eb32157" alt="image" width="800">
 
-<span style="font-size: smaller; font-style: italic;">Example of an image collected and its annotated masks. Red mask: solar panel; blue mask: antenna; green
-mask: main body.</span>
+<span style="font-size: smaller; font-style: italic;">Example of an image collected and its annotated masks. Red mask: solar panel; blue mask: antenna; green mask: main body.</span>
 
 ## Data annotation
 
-Initially, the authors manually labeled the first batch of the images. Subsequently, for all subsequent iterations, we capitalize on existing annotations to aid the labeling process. This is achieved by training state-of-the-art models to generate initial mask predictions for various spacecraft components. They employ the DeepLabV3 architecture, utilizing refined initial weights pretrained on ImageNet for the dataset. Three distinct models are trained to predict the full mask of spacecrafts, the mask of *solar panel*, and the mask of *antenna*. Following prediction, the authors select accurate part predictions from each model for assembly and proceed to refine the final mask manually. As their annotated image repository expands, the trained models undergo further refinement using the latest dataset to enhance future predictions. Consequently, this iterative process reduces manual efforts and accelerates the labeling of new images.
+Initially, the authors manually labeled the first batch of the images. Subsequently, for all subsequent iterations, we capitalize on existing annotations to aid the labeling process. This is achieved by training state-of-the-art models to generate initial mask predictions for various spacecraft components. They employ the DeepLabV3 architecture, utilizing refined initial weights pretrained on ImageNet for the dataset. Three distinct models are trained to predict the full mask of *spacecraft*, the mask of *solar panel*, and the mask of *antenna*. Following prediction, the authors select accurate part predictions from each model for assembly and proceed to refine the final mask manually. As their annotated image repository expands, the trained models undergo further refinement using the latest dataset to enhance future predictions. Consequently, this iterative process reduces manual efforts and accelerates the labeling of new images.
 
 <img src="https://github.com/dataset-ninja/spacecraft/assets/120389559/edd866b3-730c-4e54-9f64-2497c881957a" alt="image" width="800">
 
@@ -41,9 +40,9 @@ Once the authors obtained a satisfactory number of masks through the bootstrap c
 
 ## Dataset statistic
 
-The final dataset comprises 3117 images, all standardized to a resolution of 1280 × 720. Within these images, there are masks delineating 10350 parts belonging to 3667 spacecrafts. The spacecraft objects vary widely in size, ranging from as small as 100 pixels to nearly occupying the entirety of the images. On average, each spacecraft occupies an area of 122318.68 pixels. Furthermore, specific parts such as the antenna, solar panel, and main body occupy areas averaging 22853.64, 75070.76, and 75090.92 pixels, respectively. To facilitate standardized benchmarking of segmentation methods, the authors partitioned the dataset into training and test subsets, comprising 2516 and 600 images, respectively.
+The final dataset comprises 3117 images, all standardized to a resolution of 1280 × 720. Within these images, there are masks delineating 10350 parts belonging to 3667 *spacecraft*. The *spacecraft* objects vary widely in size, ranging from as small as 100 pixels to nearly occupying the entirety of the images. On average, each *spacecraft* occupies an area of 122318.68 pixels. Furthermore, specific parts such as the *antenna*, *solar panel*, and main *body* occupy areas averaging 22853.64, 75070.76, and 75090.92 pixels, respectively. To facilitate standardized benchmarking of segmentation methods, the authors partitioned the dataset into training and test subsets, comprising 2516 and 600 images, respectively.
 
-<img src="https://github.com/dataset-ninja/spacecraft/assets/120389559/692e3f9d-a7c9-492e-9622-e427bdd1930d" alt="image" width="800">
+<img src="https://github.com/dataset-ninja/spacecraft/assets/120389559/5c05db11-37c4-4d3f-8954-dc4570cd8bb0" alt="image" width="800">
 
 <span style="font-size: smaller; font-style: italic;">Histograms of the spacecraft mask areas in the training and test set.</span>
 
